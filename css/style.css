@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding:0 ;
+    box-sizing:border-box ;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body{
+    min-height:100vh ;
+    min-width: 100vh;
+    display: flex;
+    align-items:center ;
+    justify-content:center ;
+    background-color: rgb(163, 64, 255);
+}
+.pantalla{
+    user-select: none;
+    /* usuario no seleccionara la parte de los numero de mi pantalla */
+}
+.cronometro .pantalla{
+    height: 100px;
+    background-color: rgb(255, 135, 255);
+    display:flex ;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2rem;
+    box-shadow: 0px 0px 8px 5px #f3dbdb;
+    /* aplica la difuminacion de forma pareja en cada borde del recuadro,elimina los bordes y los difumina todos*/
+    border: none ;
+}
+.cronometro .pantalla span{
+    width:100px ;
+    text-align:center ;
+    font-size: 50px;
+    font-weight: 550;
+    color: rgb(40, 168, 126);
+    /* alinea textos al centro
+    color de los numeros
+    forma de combinar clases 
+    de primeras siempre va la clase principal*/
+}
+.pantalla span.separador{
+    width: 10px;
+    /*aumentar la separacion de los numeros en 10pixeles*/
+}
+.cronometro .pantalla span{
+    width: 100px;
+    text-align: center ;
+    font-size: 50px;
+    font-weight: 550;
+    color: aqua;
+}
+.pantalla span.separador {
+    width: 10px;
+    
+}
+.pantalla span.separador-mili,
+/*los milisegundos deben tener un color diferente,ahi se anexan clase en css separadas por ,*/
+.pantalla span.milisegundo{
+    color: rgb(113, 67, 156);
+}
+.cronometro .botones{
+    text-align:center ;
+    margin-top: 30px;
+    /*hace que los botones esten mas abajo
+    y hacia el centro
+    margen de arriba para que los botones se bajen*/
+}
+.pantalla .botones{
+    text-align:center ;
+    margin-top: 30px;
+}
+.botones button{
+    padding:6px 16px ;
+    outline:none ;
+    border:none ;
+    margin:0px 10px ;
+    color: rgb(69, 147, 214);
+    background: #f3dbdb;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 0.9rem;
+    cursor: pointer;
+    box-shadow: 3px 4px 3px 0px #ffb3b3;
+    /* darle padding interno
+    no dibujara una linea
+    con margen que se separe entre ellos
+    el fondo
+    el tamaño 
+    el color de la fuente de los botones
+    el tamaño y grosor de la fuente 
+    el cursor para que se vea la manito
+    3px  de sombra desde la izquierda
+    4px desde arriba de sombra
+    3px de difuminacion 
+    0px una sombra pareja,tambien se le quitan los bordes  */
+}
+.botones button.on{
+    pointer-events:none ;
+    opacity: 0.7;
+    /*crear una clase temporal
+    cuando el boton de iniciar se ponga como si se hundiera
+    ese boton quedara deshabilitado desde que arranca el cronometro
+    esta clase solo se llamara desde js ya que no esta en el html*/
+}
